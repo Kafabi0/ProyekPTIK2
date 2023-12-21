@@ -75,6 +75,35 @@ int main() {
                 }
             }
         }
+         else if (input == 3) {
+            // update data gunung
+            int nomorUpdate;
+            cout << "Masukkan nomor gunung yang ingin diupdate: ";
+            cin >> nomorUpdate;
+
+            if (nomorUpdate >= 1 && nomorUpdate <= count) {
+                // input data yang baru
+                cout << "Nama baru: ";
+                cin >> dataGunung[nomorUpdate - 1].nama;
+                cout << "Tinggi baru: ";
+                cin >> dataGunung[nomorUpdate - 1].tinggi;
+                cout << "Lokasi baru: ";
+                cin >> dataGunung[nomorUpdate - 1].lokasi;
+                cout << "Tipe Gunung baru: ";
+                cin >> dataGunung[nomorUpdate - 1].tipeG;
+                cout << "Tahun Letusan Terakhir baru: ";
+                cin >> dataGunung[nomorUpdate - 1].tahun_letusan_terakhir;
+                cout << "Total Letusan baru: ";
+                cin >> dataGunung[nomorUpdate - 1].total_letusan;
+                cout << "Status baru: ";
+                cin >> dataGunung[nomorUpdate - 1].status;
+
+                cout << "Data gunung berhasil diupdate." << endl;
+            }
+            else {
+                cout << "Nomor gunung tidak valid." << endl;
+            }
+        }
 
    }
 return 0;
